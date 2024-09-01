@@ -75,12 +75,23 @@
       </button>
     </section>
     <script>
-        let hometown = prompt("What is your hometown?");
-        alert(hometown);
+      // Prompt the user to enter the time
+let time = prompt("What time is it? Please enter the hour in 24-hour format (0-23).");
 
-        let name = prompt("What is your name?");
-        let lastname = prompt("What is your last name?");
-        alert(name + " " + lastname);
+// Convert the input to a number
+time = parseInt(time);
+
+// Check if the input is a valid hour
+if (isNaN(time) || time < 0 || time > 23) {
+    alert("Please enter a valid time between 0 and 23.");
+} else if (time < 12) {
+    alert("Good morning!");
+} else if (time < 18) {
+    alert("Good afternoon!");
+} else {
+    alert("Good evening!");
+}
+
     </script>
   </body>
 </html>
