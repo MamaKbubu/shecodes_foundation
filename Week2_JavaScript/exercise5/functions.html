@@ -75,22 +75,23 @@
       </button>
     </section>
     <script>
-      // Prompt the user to enter the time
-    let time = prompt("What time is it? Please enter the hour in 24-hour format (0-23).");
+        function getCountry() {
+            let country = prompt("What country are you from?");
 
-    // Convert the input to a number
-    time = parseInt(time);
+// Standardize the input by converting it to lowercase and trimming any extra spaces
+country = country.trim().toLowerCase();
 
-    // Check if the input is a valid hour
-    if (isNaN(time) || time < 0 || time > 23) {
-      alert("Please enter a valid time between 0 and 23.");
-    } else if (time < 12) {
-      alert("Good morning!");
-    } else if (time < 18) {
-      alert("Good afternoon!");
-    } else {
-      alert("Good evening!");
-  }
-    </script>
+// List of common variations and misspellings
+if (country === "brazil" || country === "brasil" || country === "portugal" || country === "prtugal") {
+    alert("You speak Portuguese");
+} else {
+    alert("You should learn Portuguese");
+}
+        }
+        getCountry();
+   
+//         }else if (country === Brasil || country === Portuguses){
+//         }
+        </script>
   </body>
 </html>
