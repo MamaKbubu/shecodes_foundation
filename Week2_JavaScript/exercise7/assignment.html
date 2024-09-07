@@ -107,23 +107,24 @@
       Change city
     </button>
     <p>
-      Coded by Matt Delac
+      Coded by Tshegofatso Maboela
     </p>
     <script>
-        function weatherUpdate() {
-            let cityName = prompt("What city do you live in?");
-            let currentTemp = promt("What is the current temperature in your city?");
-
-            let currentCity = document.querySelector("h1");
-            if (currentTemp > 20) {
-                currentCity.innerHTML = `🌤 <br /> Currently ${currentTemp}° in ${cityName}`;
-            } else {
-                currentCity.innerHTML = `🌧 <br /> Currently ${currentTemp}° in ${cityName}`;
-            }
+    function weatherUpdate() {
+        let city = prompt("What city do you live in?");
+        let temp = prompt("What temperature is it?");
+        let heading = document.querySelector("h1");
+        if (temp < 0) {
+          heading.innerHTML =
+            "☹️<br />Currently " + temperature + "°C in " + city;
+        } else {
+          heading.innerHTML =
+            "😄<br />Currently " + temperature + "°C in " + city;
         }
+      }
 
-        let weatherButton = document.querySelector("button");
-        weatherButton.addEventListener("click", weatherUpdate)
+      let changeButton = document.querySelector("button");
+      changeButton.addEventListener("click", weatherUpdate);
     </script>
   </body>
 </html>
