@@ -24,14 +24,28 @@
         h3{
             text-align: center;
         }
+        
         img {
             display: block;
             margin-left: auto;
             margin-right: auto;
             width: 40%;
         }
+        .reading{
+            border-radius: 50%;
+            border: 2px solid #333;
+            transition: transform 150ms ease-in-out;
+        }
+        .reading:hover {
+            filter : brightness(80%);
+            /* opacity: 0.7; */
+            transform : scale(1.2);  
+        }
         p {
             text-align: center;
+            font-size: 15px;
+            line-height: 1.5;
+
         }
         button {
             display: block;
@@ -66,21 +80,23 @@
             text-decoration: none;
         }
         .grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
-    gap: 20px; /* Space between grid items */
-    margin-top: 20px;
+            margin: 15px 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Two equal columns */
+            grid-gap: 20px; /* Space between grid items */
+            margin-top: 20px;
   }
 
   .grid img {
-    width: 50%; /* Make the images responsive */
-    height: auto;
+    width: 100%; /* Make the images responsive */
+    height: 300px;
+    border-radius: 8px;
+
   }
-    
     </style>
     <button>Dark theme things</button>
     <h2> My hobby 📚</h2>
-    <img src="https://images.unsplash.com/photo-1525715843408-5c6ec44503b1?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cmVhZGluZ3xlbnwwfHwwfHx8MA%3D%3D" alt="">
+    <img src="https://images.unsplash.com/photo-1525715843408-5c6ec44503b1?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cmVhZGluZ3xlbnwwfHwwfHx8MA%3D%3D" alt="" class="reading">
     </a>
     <h3>Books to read</h3>
     <div class="container">
