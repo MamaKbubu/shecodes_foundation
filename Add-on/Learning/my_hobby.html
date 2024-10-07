@@ -4,15 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Hobby 📚</title>
-</head>
-
-<body>
     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: crimson;
             margin: 0;
             padding: 0;
+            transition: background-color 0.3s ease-in-out;
         }
         h1 { 
             text-align: center;
@@ -30,49 +28,62 @@
             margin-left: auto;
             margin-right: auto;
             width: 40%;
+            transition: transform 0.3s ease-in-out;
         }
-        .reading{
+        img:hover{
+            transform: scale(1.1);
+        }
+        .reading {
             border-radius: 50%;
             border: 2px solid #333;
             transition: transform 150ms ease-in-out;
         }
         .reading:hover {
             filter : brightness(80%);
-            /* opacity: 0.7; */
             transform : scale(1.2);  
         }
         p {
             text-align: center;
             font-size: 15px;
             line-height: 1.5;
-
+            padding: 0 20px;
         }
         button {
             display: block;
-            margin-left: auto;
-            margin-right: auto;
+            margin: 10px auto;
             padding: 10px 20px;
             background-color: #333;
             color: #fff;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
         }
         button:hover {
             background-color: #555;
         }
+        /* New styles for the "Learn More" button */
+        .learn-more {
+            background-color: #0066cc;
+            color: #fff;
+        }
+        .learn-more:hover {
+            background-color: #004999;
+        }
         .container {
-            max-width: 600px;
-            margin: 0 auto;
+            max-width: 800px;
+            margin: 20px auto;
             padding: 20px;
             background-color: #fff;
             border-radius: 10px;
+            transition: background-color 0.3s ease-in-out;
         }
         footer {
             background-color: #333;
             color: #fff;
             text-align: center;
-            position: flex; 
+            padding: 15px 0;
+            position: fixed;
             bottom: 0;
             width: 100%;
         }
@@ -85,35 +96,100 @@
             grid-template-columns: 1fr 1fr; /* Two equal columns */
             grid-gap: 20px; /* Space between grid items */
             margin-top: 20px;
-  }
+        }
 
-  .grid img {
-    width: 100%; /* Make the images responsive */
-    height: 300px;
-    border-radius: 8px;
+        .grid img {
+            width: 100%; /* Make the images responsive */
+            height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
 
-  }
+        /* Dark mode styles */
+        .dark {
+            background-color: black;
+            color: white;
+        }
+        .dark .container {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        .dark h2, .dark h3, .dark p {
+            color: white;
+        }
+        .dark a {
+            color: pink;
+        }
     </style>
-    <button>Dark theme things</button>
-    <h2> My hobby 📚</h2>
-    <img src="https://images.unsplash.com/photo-1525715843408-5c6ec44503b1?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cmVhZGluZ3xlbnwwfHwwfHx8MA%3D%3D" alt="" class="reading">
-    </a>
-    <h3>Books to read</h3>
-    <div class="container">
-    <div class="grid">
-    <image src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1483412266i/865.jpg" alt="">
+</head>
 
-    </a>
-    <image src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1550685003i/43808723.jpg" alt=""></a>
-    <image src="https://m.media-amazon.com/images/I/71+bqfq3-HL._SY385_.jpg" alt=""></a>
-    <image src="https://m.media-amazon.com/images/I/411uFSVr9ZL._SY445_SX342_.jpg" alt=""></a>
+<body>
+    <button class="theme">Toggle Dark Theme</button>
+    
+    <h2>My Hobby 📚</h2>
+    <img src="https://images.unsplash.com/photo-1525715843408-5c6ec44503b1?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cmVhZGluZ3xlbnwwfHwwfHx8MA%3D%3D" alt="Reading" class="reading">
+    
+    <h3>Books to Read</h3>
+    <div class="container">
+        <div class="grid">
+            <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1483412266i/865.jpg" alt="Book 1">
+            <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1550685003i/43808723.jpg" alt="Book 2">
+            <img src="https://m.media-amazon.com/images/I/71+bqfq3-HL._SY385_.jpg" alt="Book 3">
+            <img src="https://m.media-amazon.com/images/I/411uFSVr9ZL._SY445_SX342_.jpg" alt="Book 4">
+        </div>
+        
+        <p>
+            I love reading books, especially philosophical ones. I love philosophical books because they challenge my mind, offering deeper insights into life's fundamental questions. They provide a space for self-reflection and push me to think critically about existence, morality, and human nature. Philosophy allows me to explore different perspectives and encourages open-mindedness, which helps me grow both intellectually and personally. The complexity of thought and the search for meaning in these books fascinate me, as they help me better understand the world and my place in it. Through philosophy, I discover timeless wisdom that resonates in modern life.
+        </p>
+
+        <!-- Wrap the button with a link -->
+        <a href="https://www.barnesandnoble.com/b/books/philosophy/_/N-29Z8q8Z1fe7">
+            <button>Books to READ</button>
+        </a>
+
+        <!-- New "Learn More" button with a different class -->
+        <button class="learn-more" id="learnMoreButton">Want to learn more</button>
     </div>
-<p>I love reading books mostly that are philosophical.I love philosophical books because they challenge my mind, offering deeper insights into life's fundamental questions. They provide a space for self-reflection and push me to think critically about existence, morality, and human nature. Philosophy allows me to explore different perspectives and encourages open-mindedness, which helps me grow both intellectually and personally. The complexity of thought and the search for meaning in these books fascinate me, as they help me better understand the world and my place in it. Through philosophy, I discover timeless wisdom that resonates in modern life.</p>
-<button> Books to READ</button>
-</div>
-</div>
-<footer>
-    Coded with ❤️ by Tshegofatso. Happy Reading
-</footer>
+
+    <footer>
+        Coded with ❤️ by Tshegofatso. Happy Reading
+    </footer>
+
+    <script>
+        // Toggle Dark Mode
+        function toggleDarkMode() {
+            let body = document.querySelector('body');
+            body.classList.toggle('dark'); // Toggles dark mode
+        }
+        
+        let themeButton = document.querySelector('.theme');
+        themeButton.addEventListener('click', toggleDarkMode);
+
+        // Handle "Learn More" Button Click
+        document.getElementById('learnMoreButton').addEventListener('click', function() {
+            // Prompt user for name
+            let userName = prompt("Please enter your name:");
+            if (userName === null || userName.trim() === "") {
+                alert("Name cannot be empty.");
+                return;
+            }
+
+            // Prompt user for email
+            let userEmail = prompt("Please enter your email:");
+            if (userEmail === null || userEmail.trim() === "") {
+                alert("Email cannot be empty.");
+                return;
+            }
+
+            // Simple email validation
+            let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(userEmail)) {
+                alert("Please enter a valid email address.");
+                return;
+            }
+
+            // Display confirmation message
+            alert(`Thank you, ${userName}! We will be in touch with you at ${userEmail}.`);
+        });
+    </script>
 </body>
 </html>
